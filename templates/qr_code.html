@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Qr Code </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+      a:link{
+    color: green; 
+  }
+</style>
+</head>
+<body>
+        <div class="p-2"><img class="img-responsive center-block d-block mx-auto" src="{{ url_for('static', path='/images/rsz_logo_white.png')}}" alt="logo" style=" width: 15%; height: 25%;">
+        </div>
+            <h2 style="font-size: 2em; text-align: center;">{{ comp_adress }}<br><p>Sénégal</p></h2>
+            <h4 style="font-size: 1em; text-align: center;"><b> <a href="https://play.google.com/store/apps/details?id=house.findme"> Téléchargez l’application FINDME </a> et créez <br> votre adresse postale</b> </h4>
+            <div class="col-md-4 ml-auto mr-auto">
+                <a href="https://insuserprod-gevxguoisq-ew.a.run.app/register/sen/{{aid}}/{{ comp_adress }}">
+                    <input class="btn btn-success" type="submit" value="S'ENREGISTRER A CETTE ADRESSE" style=" font-size: 1em ;border-radius:20px; padding:5px;margin-left: 70px;width: auto;"></a><br><br>
+                    <div class="elementor-image" style="margin:auto;display:block;">
+				<a href="https://play.google.com/store/apps/details?id=house.findme">
+                    <img src="{{ url_for('static', path='/images/google-play-french.png')}}"style="margin-left: 140px;" height="50"/></a><br><br>
+                    <a href="{{ url }}">
+                        <input class="btn btn-success" type="submit" value="ALLER A CETTE ADRESSE" style=" font-size: 1em ;border-radius:20px; padding:5px;margin-left: 100px;width: auto;"></a><br>
+                </div>
+            <br>
+            <div class="d-flex flex-row">
+                <div class="p-2">
+                    <h2 style="font-size: 1em; color: blue;  margin-left: 40px;">FINDME Partenaire du Groupe La POSTE</h2>
+                </div>
+                <div class="p-2">
+                    <img src="{{ url_for('static', path='/images/logo_poste.jpg')}}" alt="" style=" width: 55%; height: 75%; margin-left: 20px;">
+                </div>
+            </div>
+        </div>
+</body>
+</html>
